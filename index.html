@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+    <link rel="icon" type="image/png" href="images/CADICO.png">
+
+    <title>CADICO| Inmobiliaria y Desarrollo</title>
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="images/CADICO.png" alt="CADICO">
+        </div>
+        <button class="hamburger">☰</button>
+<ul class="nav-menu">
+    <li><a class="nav-link" href="#quienessomos">QUIÉNES SOMOS</a></li>
+    <li><a class="nav-link" href="#Mision">MISIÓN Y VISIÓN</a></li>
+    <li><a class="nav-link" href="#Servicios">SERVICIOS</a></li>
+    <li><a class="nav-link" href="#proyectos">PROYECTOS</a></li>
+    <li><a class="nav-link" href="#contactos">CONTACTO</a></li>
+</ul>
+
+    </nav>
+    <section class="fondo">
+        <img src="images/hero_1.jpg" alt="Fondo" class="background-image">
+    </section>
+    
+    <div class="contenedor">
+        <section class="quienes-somos">
+            <div class="texto-quienes">
+                <h2>QUIÉNES SOMOS</h2>
+                <p>
+                    Grupo Inmobiliario CADICO es una empresa mexicana fundada en marzo de 2019, 
+                    especializada en el desarrollo de viviendas horizontales y locales comerciales. 
+                    Nuestro objetivo es brindar soluciones inmobiliarias accesibles y seguras para todos los niveles 
+                    socioeconómicos, garantizando calidad y confianza en cada proyecto.
+                </p>
+            </div>
+            <div class="imagen-quienes">
+                <img id="imagen-cambio" src="images/quienes-somos.jpg" alt="Imagen de Quiénes Somos">
+            </div>
+        </section>
+        
+        <section class="valores">
+            <h2>VALORES</h2>
+            <div class="valores-contenedor">
+                <div class="valor">
+                    <h3>Honestidad</h3>
+                    <p>Actuamos con transparencia y rectitud en cada uno de nuestros proyectos.</p>
+                </div>
+                <div class="valor">
+                    <h3>Compromiso</h3>
+                    <p>Nos dedicamos con responsabilidad y pasión en cada desarrollo inmobiliario.</p>
+                </div>
+                <div class="valor">
+                    <h3>Respeto</h3>
+                    <p>Valoramos a nuestros clientes y colaboradores, fomentando un ambiente de confianza.</p>
+                </div>
+                <div class="valor">
+                    <h3>Pasión</h3>
+                    <p>Nos motiva la excelencia y la innovación en cada uno de nuestros proyectos.</p>
+                </div>
+                <div class="valor">
+                    <h3>Calidad</h3>
+                    <p>Garantizamos estándares elevados en cada vivienda y local comercial.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="Mision"></div>
+    <section class="mision-vision" style="background: url('images/S5.jpg') no-repeat center center/cover;">
+        <div class="contenido">
+            <h2>Misión y Visión</h2>
+            <div class="columnas">
+                <div class="columna">
+                    <h3>NUESTRA MISIÓN:</h3>
+                    <p>
+                        Desarrollar viviendas para todos los niveles socioeconómicos, 
+                        ofreciendo a cada familia la oportunidad de acceder a un hogar seguro, 
+                        funcional y adaptado a sus necesidades.
+                    </p>
+                </div>
+                <div class="columna">
+                    <h3>NUESTRA VISIÓN:</h3>
+                    <p>
+                        Desarrollar proyectos inmobiliarios de la más alta calidad en distintas 
+                        regiones del país, aprovechando el crecimiento económico y las oportunidades 
+                        del sector para ofrecer espacios innovadores, funcionales y de gran valor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/PT3.jpg" alt="Hogar ideal">
+                <div class="text-box">
+                    <h2>Tu hogar ideal te espera</h2>
+                    <p>Explora nuestras opciones de vivienda que combinan calidad, diseño y accesibilidad.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/S3.jpg" alt="Negocios esenciales">
+                <div class="text-box">
+                    <h2>Negocios en ubicaciones esenciales</h2>
+                    <p>Ubica tu empresa en un sitio prominente que atraerá a un creciente número de consumidores.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <div id="Servicios"></div>
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="contenedor-servicios">
+            <div class="servicio" data-imagenes='["images/PT1.jpg", "images/PT2.jpg", "images/PT3.jpg"]' data-ubicacion='{"lat": 19.4326, "lng": -99.1332}'>
+                <img src="images/PT1.jpg" alt="Desarrollo de Vivienda Horizontal">
+                <h3>Desarrollo de Vivienda Horizontal</h3>
+                <p>Convertimos proyectos en hogares con calidad y seguridad garantizada.</p>
+            </div>
+            <div class="servicio" data-imagenes='["images/S1.jpg", "images/S2.jpg", "images/S3.jpg"]' data-ubicacion='{"lat": 20.676, "lng": -103.347}'>
+                <img src="images/S1.jpg" alt="Desarrollo de Locales Comerciales">
+                <h3>Desarrollo de Locales Comerciales</h3>
+                <p>Ubicaciones estratégicas para potenciar tu negocio y atraer clientes.</p>
+            </div>
+            <div class="servicio" data-imagenes='["images/S2.jpg", "images/S3.jpg", "images/S4.jpg"]' data-ubicacion='{"lat": 21.1619, "lng": -86.8515}'>
+                <img src="images/S2.jpg" alt="Renta de Bodegas">
+                <h3>Renta de Bodegas</h3>
+                <p>Espacios seguros y adaptables para almacenamiento y logística.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Contenedor del mapa debajo del carrusel -->
+            <div id="map-container">
+                <h3>Ubicación del Servicio</h3>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <section class="beneficios">
+        <video autoplay loop muted playsinline class="video-fondo">
+            <source src="images/fondi.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <h2>Beneficios de Elegirnos</h2>
+        <div class="contenedor-beneficios">
+            <div class="carrusel-beneficios">
+                <div class="beneficio active">
+                    <h3>Desarrollo de Vivienda</h3>
+                    <p>Cada proyecto de CADICO se realiza bajo estrictos estándares de calidad, asegurando que cada detalle esté cuidado para tu satisfacción y seguridad.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>Plusvalía Constante</h3>
+                    <p>Nuestros desarrollos están ubicados en zonas estratégicas, lo que garantiza un aumento en su valor a lo largo del tiempo.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>Seguridad Garantizada</h3>
+                    <p>Nos comprometemos a ofrecer entornos seguros para nuestros clientes, aplicando las mejores prácticas en construcción y diseño.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <div class="redes-flotantes">
+        <a href="https://www.tiktok.com/@grupocadico" target="_blank">
+            <img src="images/tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://wa.me/+528711581546" target="_blank">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/grupocadico/" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61570944697596" target="_blank">
+            <img src="images/facebook.png" alt="Facebook">
+        </a>
+    </div>    
+    
+    <div id="contactos"></div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo">
+                <img src="images/CADICO.png" alt="Logo de la empresa">
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <img src="images/call.png" alt="Teléfono">
+                        <a href="tel:+528711581546">8711581546</a>
+                    </li>
+                    <li>
+                        <img src="images/email.png" alt="Email">
+                        <a href="mailto:g.melendez@grupocadico.com">g.melendez@grupocadico.com</a>
+                    </li>
+                    <li>
+                        <img src="images/marker.png" alt="Ubicación">
+                        <a href="https://maps.app.goo.gl/sPkEGSYwUmVuZkm87">González Ortega #132, Col. Centro 27000</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2025 Grupo CADICO. Todos los derechos reservados.</div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
