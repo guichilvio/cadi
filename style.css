@@ -175,97 +175,135 @@ body {
 }
 
 
+/* Estilos para Grupo CADICO con diseño premium */
+body {
+    font-family: 'Century Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f7f9;
+    color: #333;
+}
+
+header {
+    background-color: #62621f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
 .quienes-somos {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 50px;
-    background: linear-gradient(to right, #ece9e6, #ffffff);
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    background: linear-gradient(to right, #f8f7f9, #e0dacd);
+    padding: 70px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
 }
 
-.texto-quienes {
+.texto {
     flex: 1;
-    font-size: 18px;
+    font-size: 22px;
     color: #333;
-    line-height: 1.8;
+    line-height: 1.9;
     text-align: left;
+    padding-right: 20px;
 }
 
 .quienes-somos h2 {
-    font-size: 38px;
-    color: #8d7b5a;
-    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    color: #cfa52f;
+    font-family: 'Baskerville Old Face', serif;
     margin-bottom: 20px;
+    border-bottom: 4px solid #cfa52f;
+    display: inline-block;
 }
 
-.imagen-quienes {
+.imagen {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.imagen-quienes img {
+.imagen img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 1s ease-in-out;
+    max-width: 480px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.imagen img:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 .valores {
-    margin-top: 40px;
-    padding: 50px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    padding: 70px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 100%;
+    width: 90%;
+    margin: 50px auto;
 }
 
 .valores h2 {
-    font-size: 38px;
-    color: #8d7b5a;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
+    font-size: 45px;
+    color: #cfa52f;
+    font-family: 'Baskerville Old Face', serif;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #cfa52f;
+    display: inline-block;
 }
 
 .valores-contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .valor {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 250px;
+    background: linear-gradient(to bottom, #f8f7f9, #e0dacd);
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    max-width: 280px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .valor:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.5);
 }
 
 .valor h3 {
-    font-size: 22px;
+    font-size: 26px;
     color: #625e37;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-top: 10px;
 }
 
+
 .valor p {
-    font-size: 16px;
+    font-size: 19px;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* Responsividad */
@@ -275,7 +313,7 @@ body {
         text-align: center;
     }
 
-    .imagen-quienes img {
+    .imagen img {
         max-width: 100%;
     }
 
@@ -284,6 +322,7 @@ body {
         align-items: center;
     }
 }
+
 
 /* Misión y Visión  */
 .mision-vision {
@@ -470,74 +509,59 @@ body {
     }
 }
 
-/* Estilos generales */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    overflow: auto;
-}
-
-body.noscroll {
-    overflow: hidden;
-}
-
 .servicios {
+    cursor: pointer;
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
     background: linear-gradient(135deg, #f8f7f9 30%, #e8e6e3 100%);
 }
-
 .servicios h2 {
-    font-size: 40px;
-    color: #625e37;
+    font-size: 46px;
+    color: #cfa52f;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
-
+.servicio h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+.servicio img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 .contenedor-servicios {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     max-width: 1200px;
     margin: auto;
 }
-
 .servicio {
     background: white;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
     width: 30%;
     min-width: 320px;
-    padding: 35px;
+    padding: 50px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
-    border: 3px solid #cfa52f;
+    border: 4px solid #cfa52f;
     cursor: pointer;
     overflow: hidden;
     position: relative;
 }
-
 .servicio:hover {
-    transform: translateY(-12px);
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-15px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
 }
-
-.servicio img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Estilos del popup */
+/* Popup */
 .popup {
     display: none;
     position: fixed;
@@ -548,259 +572,242 @@ body.noscroll {
     background-color: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.3s ease-in-out;
     z-index: 1000;
+    transition: opacity 0.4s ease-in-out;
 }
-
 .popup-content {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     color: white;
-    padding: 25px;
-    width: 85vw;
-    max-width: 1000px;
-    border-radius: 12px;
+    width: 60vw;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 18px;
     text-align: center;
-    position: relative;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    animation: slideUp 0.4s ease-in-out;
-    border: 3px solid #cfa52f;
+    border: 4px solid #cfa52f;
 }
-
-/* Estilos del botón de cerrar */
-.popup-content .close {
+/* Carrusel */
+.swiper-container {
+    width: 90%;
+    max-width: 400px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: filter 0.3s;
+}
+.swiper-slide:hover img {
+    filter: brightness(1);
+}
+/* Botón de Cerrar */
+.close {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 15px;
+    right: 20px;
     font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
     color: white;
     background: #cfa52f;
-    border: 2px solid white;
+    border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+.close:hover {
+    background: #b38e28;
+}
+/* Mapa */
+#map-container {
+    margin-top: 30px;
+    text-align: center;
+}
+#map {
+    width: 90%;
+    height: 250px;
+    border-radius: 15px;
 }
 
-.popup-content .close:hover {
-    background: white;
-    color: #cfa52f;
-    transform: scale(1.1);
-}
-
-/* Carrusel */
-.swiper-container {
-    width: 85vw;
-    max-width: 900px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 12px;
-    perspective: 1200px;
-    margin-bottom: 30px;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
-}
-
-.swiper-slide-active {
-    transform: scale(1.2);
-    z-index: 2;
-}
-
-.swiper-slide-prev {
-    transform: translateX(-20%) scale(0.9);
-    opacity: 0.8;
-}
-
-.swiper-slide-next {
-    transform: translateX(20%) scale(0.9);
-    opacity: 0.8;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-
-/* Sección Beneficios con Video de Fondo */
-.beneficios {
+/* Sección Beneficios con Video de Fondo - Diseño con video */
+.beneficios-cadico {
     position: relative;
     text-align: center;
-    color: white;
+    color: #f8f7f9;
     padding: 100px 20px 120px 20px;
     overflow: hidden;
+    font-family: "Century Gothic", sans-serif;
 }
 
-.beneficios h2 {
+.beneficios-cadico h2 {
     font-size: 42px;
     font-weight: bold;
     color: #ffcc00;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
-    border-bottom: 4px solid #ffb400;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
+    padding: 12px 24px;
+    border-bottom: 5px solid #ffcc00;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 14px;
+    z-index: 2;
 }
 
-.video-fondo {
+.video-fondo-cadico {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.4);
     z-index: -2;
 }
 
-.overlay-beneficios {
+.overlay-beneficios-cadico {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Capa oscura para mayor contraste */
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
 
-.contenedor-beneficios {
+.contenedor-beneficios-cadico {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 500px;
+    height: 450px;
     perspective: 1200px;
+    z-index: 1;
 }
 
-.carrusel-beneficios {
+.carrusel-beneficios-cadico {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 100%;
     max-width: 1100px;
+    height: 280px;
 }
 
-.beneficio {
+.beneficio-cadico {
     position: absolute;
     opacity: 0;
     transition: opacity 1.2s ease-in-out, transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
-    width: 70%;
-    max-width: 750px;
+    width: 75%;
+    max-width: 800px;
     min-height: 250px;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.9);
+    border-radius: 18px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.9);
     text-align: center;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(15px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.9);
-    border: 3px solid #ffb400;
+    background: rgba(98, 98, 31, 0.85);
+    border: 5px solid #ffcc00;
     overflow: hidden;
-    transform: translateY(20px);
+    transform: translateY(0px);
 }
 
-.beneficio.active {
+.beneficio-cadico.active {
     opacity: 1;
-    transform: scale(1) rotateY(0deg) translateY(30px);
+    transform: scale(1) translateY(0px);
     z-index: 3;
-    border: 4px solid #ffcc00;
+    border: 6px solid #ffcc00;
 }
 
-.beneficio.prev {
-    transform: scale(0.85) rotateY(-8deg) translateX(-280px) translateY(20px);
-    opacity: 0.6;
+.beneficio-cadico.prev {
+    transform: scale(0.88) translateX(-350px) translateY(20px);
+    opacity: 0.5;
     z-index: 2;
-    border: 2px solid #ffb400;
+    border: 3px solid rgba(255, 204, 0, 0.6);
+    backdrop-filter: blur(10px);
 }
 
-.beneficio.next {
-    transform: scale(0.85) rotateY(8deg) translateX(280px) translateY(20px);
-    opacity: 0.6;
+.beneficio-cadico.next {
+    transform: scale(0.88) translateX(350px) translateY(20px);
+    opacity: 0.5;
     z-index: 2;
-    border: 2px solid #ffb400;
+    border: 3px solid rgba(255, 204, 0, 0.6);
+    backdrop-filter: blur(10px);
 }
 
-.beneficio h3 {
-    font-size: 30px;
+.beneficio-cadico h3 {
+    font-size: 32px;
     color: #ffcc00;
     font-weight: bold;
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1.8px;
+    letter-spacing: 2px;
+    font-family: "Baskerville Old Face", serif;
 }
 
-.beneficio p {
+.beneficio-cadico p {
     font-size: 22px;
-    color: white;
+    color: #f8f7f9;
     line-height: 1.8;
     font-style: italic;
     padding: 18px;
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
     max-width: 90%;
-    word-wrap: break-word;
-    white-space: normal;
     text-align: center;
+    font-family: "Californian FB", serif;
 }
 
 @media (max-width: 900px) {
-    .beneficio {
-        width: 80%;
-        max-width: 550px;
+    .beneficio-cadico {
+        width: 85%;
+        max-width: 600px;
         padding: 28px;
     }
-    .beneficio.prev {
-        transform: scale(0.8) rotateY(-6deg) translateX(-220px) translateY(20px);
+    .beneficio-cadico.prev {
+        transform: scale(0.85) translateX(-250px) translateY(15px);
     }
-    .beneficio.next {
-        transform: scale(0.8) rotateY(6deg) translateX(220px) translateY(20px);
+    .beneficio-cadico.next {
+        transform: scale(0.85) translateX(250px) translateY(15px);
     }
 }
 
 @media (max-width: 600px) {
-    .beneficio {
-        width: 90%;
+    .beneficio-cadico {
+        width: 95%;
         max-width: 400px;
-        padding: 22px;
-        border-radius: 18px;
+        padding: 20px;
+        border-radius: 15px;
     }
-    .beneficio h3 {
+    .beneficio-cadico h3 {
         font-size: 26px;
     }
-    .beneficio p {
-        font-size: 16px;
+    .beneficio-cadico p {
+        font-size: 18px;
         max-width: 95%;
     }
-    .beneficio.prev {
-        transform: scale(0.75) rotateY(-5deg) translateX(-180px) translateY(20px);
+    .beneficio-cadico.prev {
+        transform: scale(0.8) translateX(-180px) translateY(10px);
     }
-    .beneficio.next {
-        transform: scale(0.75) rotateY(5deg) translateX(180px) translateY(20px);
+    .beneficio-cadico.next {
+        transform: scale(0.8) translateX(180px) translateY(10px);
     }
 }
+
 
 /* Widgets flotantes */
 .redes-flotantes {

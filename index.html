@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_REAL"></script>
     <link rel="icon" type="image/png" href="images/CADICO.png">
 
     <title>CADICO| Inmobiliaria y Desarrollo</title>
@@ -19,7 +23,7 @@
 <ul class="nav-menu">
     <li><a class="nav-link" href="#quienessomos">QUIÉNES SOMOS</a></li>
     <li><a class="nav-link" href="#Mision">MISIÓN Y VISIÓN</a></li>
-    <li><a class="nav-link" href="#Servicios">SERVICIOS</a></li>
+    <li><a class="nav-link" href="#Servicio">SERVICIOS</a></li>
     <li><a class="nav-link" href="#beneficios">BENEFICIOS</a></li>
     <li><a class="nav-link" href="#contactos">CONTACTO</a></li>
 </ul>
@@ -29,50 +33,46 @@
         <img src="images/hero_1.jpg" alt="Fondo" class="background-image">
     </section>
     
-    <div id="quienessomos"></div>
-    <div class="contenedor">
-        <div id="quienessomos"></div>
-        <section class="quienes-somos">
-            <div class="texto-quienes">
-                <h2>QUIÉNES SOMOS</h2>
-                <p>
-                    Grupo Inmobiliario CADICO es una empresa mexicana fundada en marzo de 2019, 
-                    especializada en el desarrollo de viviendas horizontales y locales comerciales. 
-                    Nuestro objetivo es brindar soluciones inmobiliarias accesibles y seguras para todos los niveles 
-                    socioeconómicos, garantizando calidad y confianza en cada proyecto.
-                </p>
+    <section class="quienes-somos" id="quienes">
+        <div class="texto">
+            <h2>QUIÉNES SOMOS</h2>
+            <p>Grupo Inmobiliario CADICO es una empresa mexicana especializada en el desarrollo de viviendas horizontales y locales comerciales.</p>
+        </div>
+        <div class="imagen">
+            <img id="imagen-cambio" src="images/quienes-somos.jpg" alt="Imagen de Quiénes Somos">
+        </div>
+    </section>
+
+    <section class="valores" id="valores">
+        <h2>VALORES</h2>
+        <div class="valores-contenedor">
+            <div class="valor">
+                <img src="images/confiar.png" alt="Honestidad">
+                <h3>Honestidad</h3>
+                <p>Actuamos con transparencia en cada uno de nuestros proyectos.</p>
             </div>
-            <div class="imagen-quienes">
-                <img id="imagen-cambio" src="images/quienes-somos.jpg" alt="Imagen de Quiénes Somos">
+            <div class="valor">
+                <img src="images/compromiso.png" alt="Compromiso">
+                <h3>Compromiso</h3>
+                <p>Nos dedicamos con responsabilidad y pasión.</p>
             </div>
-        </section>
-        
-        <section class="valores">
-            <h2>VALORES</h2>
-            <div class="valores-contenedor">
-                <div class="valor">
-                    <h3>Honestidad</h3>
-                    <p>Actuamos con transparencia y rectitud en cada uno de nuestros proyectos.</p>
-                </div>
-                <div class="valor">
-                    <h3>Compromiso</h3>
-                    <p>Nos dedicamos con responsabilidad y pasión en cada desarrollo inmobiliario.</p>
-                </div>
-                <div class="valor">
-                    <h3>Respeto</h3>
-                    <p>Valoramos a nuestros clientes y colaboradores, fomentando un ambiente de confianza.</p>
-                </div>
-                <div class="valor">
-                    <h3>Pasión</h3>
-                    <p>Nos motiva la excelencia y la innovación en cada uno de nuestros proyectos.</p>
-                </div>
-                <div class="valor">
-                    <h3>Calidad</h3>
-                    <p>Garantizamos estándares elevados en cada vivienda y local comercial.</p>
-                </div>
+            <div class="valor">
+                <img src="images/confianza.png" alt="Respeto">
+                <h3>Respeto</h3>
+                <p>Valoramos a nuestros clientes y colaboradores.</p>
             </div>
-        </section>
-    </div>
+            <div class="valor">
+                <img src="images/pasion.png" alt="Pasión">
+                <h3>Pasión</h3>
+                <p>Nos motiva la excelencia y la innovación.</p>
+            </div>
+            <div class="valor">
+                <img src="images/calidad.png" alt="Calidad">
+                <h3>Calidad</h3>
+                <p>Garantizamos estándares elevados en cada proyecto.</p>
+            </div>
+        </div>
+    </section>
 
     <div id="Mision"></div>
     <section class="mision-vision" style="background: url('images/S5.jpg') no-repeat center center/cover;">
@@ -120,9 +120,9 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
     
-    <div id="Servicios"></div>
+     <div id="servicio"></div>
     <section class="servicios">
-        <h2>Nuestros Servicios</h2>
+        <h2>Servicios que Ofrecemos</h2>
         <div class="contenedor-servicios">
             <div class="servicio" data-imagenes='["images/PT1.jpg", "images/PT2.jpg", "images/PT3.jpg"]' data-ubicacion='{"lat": 19.4326, "lng": -99.1332}'>
                 <img src="images/PT1.jpg" alt="Desarrollo de Vivienda Horizontal">
@@ -134,14 +134,14 @@
                 <h3>Desarrollo de Locales Comerciales</h3>
                 <p>Ubicaciones estratégicas para potenciar tu negocio y atraer clientes.</p>
             </div>
-            <div class="servicio" data-imagenes='["images/S2.jpg", "images/S3.jpg", "images/S4.jpg"]' data-ubicacion='{"lat": 21.1619, "lng": -86.8515}'>
+            <div class="servicio" data-imagenes='["images/B1.jpg", "images/B2.jpg", "images/B3.jpg"]' data-ubicacion='{"lat": 21.1619, "lng": -86.8515}'>
                 <img src="images/S2.jpg" alt="Renta de Bodegas">
                 <h3>Renta de Bodegas</h3>
                 <p>Espacios seguros y adaptables para almacenamiento y logística.</p>
             </div>
         </div>
     </section>
-    
+
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close">&times;</span>
@@ -150,34 +150,33 @@
                 <div class="swiper-wrapper" id="swiper-wrapper"></div>
                 <div class="swiper-pagination"></div>
             </div>
-            
-            <!-- Contenedor del mapa debajo del carrusel -->
             <div id="map-container">
-                <h3>Ubicación del Servicio</h3>
+                <h3>Ubicación</h3>
                 <div id="map"></div>
             </div>
         </div>
     </div>
-    
-    
+
     <div id="beneficios"></div>
-    <section class="beneficios">
-        <video autoplay loop muted playsinline class="video-fondo">
-            <source src="images/fondi.mp4" type="video/mp4">
+    <div id="beneficios-cadico"></div>
+    <section class="beneficios-cadico">
+        <video autoplay loop muted playsinline class="video-fondo-cadico">
+        <source src="images/fondi.mp4" type="video/mp4">
             Tu navegador no soporta videos.
         </video>
+        <div class="overlay-beneficios-cadico"></div>
         <h2>Beneficios de Elegirnos</h2>
-        <div class="contenedor-beneficios">
-            <div class="carrusel-beneficios">
-                <div class="beneficio active">
+        <div class="contenedor-beneficios-cadico">
+            <div class="carrusel-beneficios-cadico">
+                <div class="beneficio-cadico active">
                     <h3>Desarrollo de Vivienda</h3>
                     <p>Cada proyecto de CADICO se realiza bajo estrictos estándares de calidad, asegurando que cada detalle esté cuidado para tu satisfacción y seguridad.</p>
                 </div>
-                <div class="beneficio">
+                <div class="beneficio-cadico">
                     <h3>Plusvalía Constante</h3>
                     <p>Nuestros desarrollos están ubicados en zonas estratégicas, lo que garantiza un aumento en su valor a lo largo del tiempo.</p>
                 </div>
-                <div class="beneficio">
+                <div class="beneficio-cadico">
                     <h3>Seguridad Garantizada</h3>
                     <p>Nos comprometemos a ofrecer entornos seguros para nuestros clientes, aplicando las mejores prácticas en construcción y diseño.</p>
                 </div>

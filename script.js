@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Navbar - Cambio de color al hacer scroll
     window.addEventListener('scroll', function () {
+25
         var menu = document.querySelector('.menu');
         if (window.scrollY > 100) {
             menu.classList.add('scrolled');
@@ -86,110 +87,107 @@ document.addEventListener('DOMContentLoaded', function () {
          }
     });
 
-    /**Beneficios */
-
+    /*beneficios*/
     document.addEventListener('DOMContentLoaded', function () {
-        const beneficios = document.querySelectorAll('.beneficio');
+        const beneficios = document.querySelectorAll('.beneficio-cadico');
         let index = 0;
-
+    
         function actualizarCarrusel() {
             beneficios.forEach((beneficio, i) => {
                 beneficio.classList.remove('active', 'prev', 'next');
             });
-
+    
             const prevIndex = (index - 1 + beneficios.length) % beneficios.length;
             const nextIndex = (index + 1) % beneficios.length;
-
+    
             beneficios[index].classList.add('active');
             beneficios[prevIndex].classList.add('prev');
             beneficios[nextIndex].classList.add('next');
         }
-
+    
         function cambiarBeneficio() {
             index = (index + 1) % beneficios.length;
             actualizarCarrusel();
         }
-
+    
         actualizarCarrusel();
         setInterval(cambiarBeneficio, 4000);
     });
+    
 
-    /* Quienes somos  */
-    document.addEventListener("DOMContentLoaded", function () {
-        const imagenes = ["images/quienes-somos.jpg", "images/S5.jpg"];
-        let indice = 0;
-        const imagen = document.getElementById("imagen-cambio");
+    /* Quienes somos */
+document.addEventListener("DOMContentLoaded", function () {
+    const imagenes = ["images/quienes-somos.jpg", "images/S5.jpg"];
+    let indice = 0;
+    const imagen = document.getElementById("imagen-cambio");
 
-        setInterval(() => {
-            imagen.style.opacity = 0;
+    setInterval(() => {
+        imagen.style.opacity = 0;
+        setTimeout(() => {
+            indice = (indice + 1) % imagenes.length;
+            imagen.src = imagenes[indice];
+            imagen.style.opacity = 1;
+        }, 1000);
+    }, 5000);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const servicios = document.querySelectorAll(".servicio");
+    const popup = document.getElementById("popup");
+    const popupTitle = document.getElementById("popup-title");
+    const swiperWrapper = document.getElementById("swiper-wrapper");
+    const closePopup = document.querySelector(".close");
+    const body = document.body;
+    const mapContainer = document.getElementById("map");
+    let map;
+    let marker;
+    let swiper;
+    
+    servicios.forEach(servicio => {
+        servicio.addEventListener("click", function () {
+            const titulo = this.querySelector("h3").innerText;
+            const imagenes = JSON.parse(this.getAttribute("data-imagenes"));
+            const ubicacion = JSON.parse(this.getAttribute("data-ubicacion"));
+            
+            popupTitle.innerText = titulo;
+            swiperWrapper.innerHTML = "";
+            
+            imagenes.forEach(img => {
+                let slide = document.createElement("div");
+                slide.classList.add("swiper-slide");
+                let imgElement = document.createElement("img");
+                imgElement.src = img;
+                imgElement.alt = titulo;
+                slide.appendChild(imgElement);
+                swiperWrapper.appendChild(slide);
+            });
+            
             setTimeout(() => {
-                indice = (indice + 1) % imagenes.length;
-                imagen.src = imagenes[indice];
-                imagen.style.opacity = 1;
-            }, 1000);
-        }, 5000);
-    });
-
-    /** servicios */
-    document.addEventListener("DOMContentLoaded", function () {
-        const servicios = document.querySelectorAll(".servicio");
-        const popup = document.getElementById("popup");
-        const popupTitle = document.getElementById("popup-title");
-        const swiperWrapper = document.getElementById("swiper-wrapper");
-        const closePopup = document.querySelector(".close");
-        const body = document.body;
-        
-        let swiper;
-        
-        servicios.forEach(servicio => {
-            servicio.addEventListener("click", function () {
-                const titulo = this.querySelector("h3").innerText;
-                const imagenes = JSON.parse(this.getAttribute("data-imagenes"));
-                
-                popupTitle.innerText = titulo;
-                swiperWrapper.innerHTML = "";
-                
-                imagenes.forEach(img => {
-                    let slide = document.createElement("div");
-                    slide.classList.add("swiper-slide");
-                    slide.innerHTML = `<img src="${img}" alt="${titulo}">`;
-                    swiperWrapper.appendChild(slide);
-                });
-                
-                if (swiper) {
-                    swiper.destroy(true, true);
-                }
-                
                 swiper = new Swiper(".swiper-container", {
                     loop: true,
-                    autoplay: {
-                        delay: 2000,
-                        disableOnInteraction: false,
-                    },
-                    effect: 'coverflow',
-                    grabCursor: true,
+                    autoplay: { delay: 2000, disableOnInteraction: false },
+                    effect: 'slide',
                     centeredSlides: true,
-                    slidesPerView: "auto",
-                    coverflowEffect: {
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 250,
-                        modifier: 1,
-                        slideShadows: false,
-                    },
+                    slidesPerView: 1,
                     pagination: { el: ".swiper-pagination", clickable: true }
                 });
-                
-                popup.style.display = "flex";
-                body.classList.add("noscroll");
-            });
-        });
-        
-        closePopup.addEventListener("click", function () {
-            popup.style.display = "none";
-            body.classList.remove("noscroll");
+            }, 500);
+            
+            if (!map) {
+                map = new google.maps.Map(mapContainer, { center: ubicacion, zoom: 15 });
+                marker = new google.maps.Marker({ position: ubicacion, map: map });
+            } else {
+                map.setCenter(ubicacion);
+                marker.setPosition(ubicacion);
+            }
+            
+            popup.style.display = "flex";
+            body.classList.add("noscroll");
         });
     });
-
-
     
+    closePopup.addEventListener("click", function () {
+        popup.style.display = "none";
+        body.classList.remove("noscroll");
+    });
+});
